@@ -90,17 +90,13 @@
       color: var(--primary-dark);
     }
 
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #f3b340, #1f4f6b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 0.9rem;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+    .brand-logo {
+      height: 42px;
+      width: auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+      background: var(--white);
+      padding: 4px 6px;
     }
 
     .nav-links {
@@ -154,6 +150,14 @@
 
     .hero {
       padding: 3.5rem 0 2.5rem;
+    }
+
+    .hero-surface {
+      background: linear-gradient(135deg, #ffffff, #eef2f6);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      border-radius: 28px;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+      padding: 2.2rem;
     }
 
     .hero-grid {
@@ -705,6 +709,10 @@
     /* Responsive */
 
     @media (max-width: 900px) {
+      .hero-surface {
+        padding: 1.6rem;
+      }
+
       .hero-grid,
       .about-grid,
       .projects-grid,
@@ -735,6 +743,10 @@
     }
 
     @media (max-width: 640px) {
+      .hero-surface {
+        padding: 1.25rem;
+      }
+
       .projects-grid,
       .services-grid {
         grid-template-columns: minmax(0, 1fr);
@@ -765,7 +777,7 @@
     <header>
       <div class="container nav">
         <a href="#top" class="brand">
-          <div class="brand-mark">R</div>
+          <img src="RiosConstructions.png" alt="Rios Constructions logo" class="brand-logo" />
           <div>
             Rios Constructions
           </div>
@@ -775,7 +787,7 @@
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
-          <a href="tel:+1661XXXXXXX" class="nav-cta">
+          <a href="tel:+16613483242" class="nav-cta">
             <span>📞</span> Call now
           </a>
         </nav>
@@ -785,79 +797,84 @@
     <main id="top">
       <!-- HERO -->
       <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <div class="hero-kicker">Construction & Remodeling – Bakersfield, CA</div>
-            <h1 class="hero-title">
-              Reliable construction for homes in <span>Bakersfield</span>.
-            </h1>
-            <p class="hero-subtitle">
-              Rios Constructions specializes in kitchen and bathroom remodeling, granite
-              installation, drywall, flooring, plumbing, roofing, framing and painting.
-              We deliver clean, professional work you can trust.
-            </p>
-
-            <div class="hero-pills">
-              <div class="pill">Granite Installation</div>
-              <div class="pill">Kitchen Remodeling</div>
-              <div class="pill">Drywall & Painting</div>
-              <div class="pill">Flooring & Roofing</div>
-            </div>
-
-            <div class="hero-cta-row">
-              <a href="#contact" class="btn-primary">
-                Get a free estimate
-                <span>→</span>
-              </a>
-              <a href="#projects" class="btn-outline">
-                View recent projects
-              </a>
-            </div>
-
-            <div class="hero-note">
-              <strong>Licensed & insured.</strong> Serving Bakersfield and nearby areas.
-            </div>
-          </div>
-
-          <aside class="hero-card">
-            <div class="hero-card-header">
+        <div class="container">
+          <div class="hero-surface">
+            <div class="hero-grid">
               <div>
-                <div class="badge-local">Bakersfield • CA</div>
-                <div class="hero-tagline">Interior & exterior remodeling done right.</div>
-              </div>
-            </div>
+                <div class="hero-kicker">Construction & Remodeling – Bakersfield, CA</div>
+                <h1 class="hero-title">
+                  Reliable construction for homes in <span>Bakersfield</span>.
+                </h1>
+                <p class="hero-subtitle">
+                  Rios Constructions specializes in kitchen and bathroom remodeling, granite
+                  installation, drywall, flooring, plumbing, roofing, framing and painting.
+                  We deliver clean, professional work you can trust.
+                </p>
 
-            <div class="hero-metrics">
-              <div class="metric">
-                <div class="metric-label">Drywall & paint</div>
-                <div class="metric-value">Specialist</div>
-                <span>Smooth finishes & clean lines.</span>
-              </div>
-              <div class="metric">
-                <div class="metric-label">Response time</div>
-                <div class="metric-value">Fast</div>
-                <span>We visit your home for a quote.</span>
-              </div>
-              <div class="metric">
-                <div class="metric-label">Remodels</div>
-                <div class="metric-value">Kitchen • Bath</div>
-                <span>From demo to final details.</span>
-              </div>
-            </div>
+                <div class="hero-pills">
+                  <div class="pill">Granite Installation</div>
+                  <div class="pill">Kitchen Remodeling</div>
+                  <div class="pill">Drywall & Painting</div>
+                  <div class="pill">Flooring & Roofing</div>
+                </div>
 
-            <div class="hero-services-mini">
-              <span>Granite countertops</span>
-              <span>Flooring installation</span>
-              <span>Plumbing adjustments</span>
-              <span>Framing & drywall</span>
-              <span>Interior / exterior paint</span>
-            </div>
+                <div class="hero-cta-row">
+                  <a href="#contact" class="btn-primary">
+                    Get a free estimate
+                    <span>→</span>
+                  </a>
+                  <a href="https://wa.me/16613483242" class="btn-outline">
+                    💬 WhatsApp us
+                  </a>
+                </div>
 
-            <div class="hero-stamp">
-              Free on-site estimates<br />
-              <strong>Rios Constructions</strong>
-            </div>
-          </aside>
+                <div class="hero-note">
+                  <strong>Licensed & insured.</strong> Serving Bakersfield, Fresno, Lost Hills, Delano and surrounding areas.
+                  Call or WhatsApp us at <a href="tel:+16613483242">+1 (661) 348-3242</a>.
+                </div>
+              </div>
+
+              <aside class="hero-card">
+                <div class="hero-card-header">
+                  <div>
+                    <div class="badge-local">Bakersfield • CA</div>
+                    <div class="hero-tagline">Interior & exterior remodeling done right.</div>
+                  </div>
+                </div>
+
+                <div class="hero-metrics">
+                  <div class="metric">
+                    <div class="metric-label">Drywall & paint</div>
+                    <div class="metric-value">Specialist</div>
+                    <span>Smooth finishes & clean lines.</span>
+                  </div>
+                  <div class="metric">
+                    <div class="metric-label">Response time</div>
+                    <div class="metric-value">Fast</div>
+                    <span>We visit your home for a quote.</span>
+                  </div>
+                  <div class="metric">
+                    <div class="metric-label">Remodels</div>
+                    <div class="metric-value">Kitchen • Bath</div>
+                    <span>From demo to final details.</span>
+                  </div>
+                </div>
+
+                <div class="hero-services-mini">
+                  <span>Granite countertops</span>
+                  <span>Flooring installation</span>
+                  <span>Plumbing adjustments</span>
+                  <span>Framing & drywall</span>
+                  <span>Interior / exterior paint</span>
+                </div>
+
+                <div class="hero-stamp">
+                  Free on-site estimates<br />
+                  <strong>Rios Constructions</strong>
+                </div>
+              </aside>
+          </div>
+          </div>
         </div>
       </section>
 
@@ -1094,10 +1111,11 @@
 
             <div class="contact-card">
               <div class="contact-badge">
-                📍 Serving Bakersfield, CA and nearby areas
+                📍 Serving Bakersfield, Fresno, Lost Hills, Delano and nearby areas
               </div>
               <div class="contact-info">
-                <p><strong>Phone:</strong> <a href="tel:+1661XXXXXXX">+1 (661) XXX-XXXX</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+16613483242">+1 (661) 348-3242</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/16613483242">+1 (661) 348-3242</a></p>
                 <p><strong>Email:</strong> <a href="mailto:info@riosconstructions.com">info@riosconstructions.com</a></p>
                 <!-- Puedes cambiar este correo por el tuyo real -->
                 <p><strong>Hours:</strong> Monday – Saturday, 8:00 AM – 6:00 PM</p>
@@ -1179,11 +1197,11 @@
 
     <!-- FLOATING BUTTONS (llamadas rápidas en celular) -->
     <div class="floating-actions">
-      <a href="tel:+1661XXXXXXX" class="fab">
+      <a href="tel:+16613483242" class="fab">
         📞 Call now
       </a>
       <!-- Si usas WhatsApp Business, cambia el enlace por tu número real -->
-      <a href="https://wa.me/1661XXXXXXX" class="fab fab-secondary">
+      <a href="https://wa.me/16613483242" class="fab fab-secondary">
         💬 WhatsApp quote
       </a>
     </div>
