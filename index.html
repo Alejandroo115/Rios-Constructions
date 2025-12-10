@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rios Constructions – Remodeling & Construction in Bakersfield, CA</title>
+
+  <meta name="description" content="Rios Constructions is a construction and remodeling company in Bakersfield, California. We specialize in granite installation, kitchen and bathroom remodeling, drywall, flooring, roofing, framing, plumbing and painting.">
+  <meta name="keywords" content="Rios Constructions, construction Bakersfield, remodeling Bakersfield, granite installation, drywall specialist, flooring, roofing, plumbing, painting">
+
+  <style>
+    :root {
+      --primary: #1f4f6b;
+      --primary-dark: #16374a;
+      --accent: #f3b340;
+      --bg: #f4f6f9;
+      --text: #222222;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --max-width: 1100px;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 14px 35px rgba(15, 23, 42, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout base */
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Header / Navbar */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(244, 246, 249, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--primary-dark);
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #f3b340, #1f4f6b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 0.9rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 0.15rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 70%;
+    }
+
+    .nav-cta {
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      background: var(--primary);
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.35);
+    }
+
+    .nav-cta span {
+      font-size: 1.05rem;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+      line-height: 1.05;
+      margin-bottom: 0.9rem;
+      color: var(--primary-dark);
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .pill {
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn-primary {
+      padding: 0.85rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-outline {
+      padding: 0.8rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--primary-dark);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-note strong {
+      color: var(--primary-dark);
+    }
+
+    /* Hero visual */
+
+    .hero-card {
+      background: radial-gradient(circle at 0 0, #fef3c7, #0f172a);
+      border-radius: 30px;
+      padding: 1.4rem 1.4rem 1.1rem;
+      color: var(--white);
+      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.55);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .badge-local {
+      font-size: 0.7rem;
+      padding: 0.18rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(248, 250, 252, 0.3);
+    }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .metric {
+      padding: 0.6rem;
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .metric-label {
+      font-size: 0.72rem;
+      color: #cbd5f5;
+      margin-bottom: 0.15rem;
+    }
+
+    .metric-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .metric span {
+      font-size: 0.75rem;
+    }
+
+    .hero-services-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    .hero-services-mini span {
+      padding: 0.22rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .hero-stamp {
+      position: absolute;
+      right: 1.5rem;
+      bottom: 1.3rem;
+      width: 70px;
+      height: 70px;
+      border-radius: 999px;
+      border: 1px dashed rgba(248, 250, 252, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 0.6rem;
+      background: radial-gradient(circle at 30% 0, rgba(251, 191, 36, 0.3), transparent);
+    }
+
+    /* Section generic */
+
+    section {
+      padding: 2.5rem 0;
+    }
+
+    .section-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+      color: var(--primary-dark);
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 32rem;
+    }
+
+    /* Services */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.1rem 1rem;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      position: relative;
+    }
+
+    .service-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(31, 79, 107, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+
+    .service-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .service-note {
+      margin-top: auto;
+      font-size: 0.78rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 0.7rem;
+    }
+
+    .about-list li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .about-highlight {
+      margin-top: 0.8rem;
+      font-size: 0.84rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    .about-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+      font-size: 0.78rem;
+    }
+
+    .badge-soft {
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(31, 79, 107, 0.05);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    .about-blockquote {
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding-left: 0.8rem;
+      margin-top: 0.6rem;
+      font-style: italic;
+    }
+
+    /* Projects */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+
+    .project-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-image {
+      height: 150px;
+      background-image: linear-gradient(to bottom right, #020617, #1f2937);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-image::after {
+      content: "Project photo";
+      position: absolute;
+      bottom: 0.6rem;
+      left: 0.8rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(249, 250, 251, 0.8);
+    }
+
+    .project-body {
+      padding: 0.9rem 1rem 1rem;
+    }
+
+    .project-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      color: var(--primary-dark);
+    }
+
+    .project-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .contact-info {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-info strong {
+      color: var(--primary-dark);
+    }
+
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(31, 79, 107, 0.05);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.78rem;
+      margin-bottom: 0.7rem;
+    }
+
+    form {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.55rem 0.65rem;
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.9);
+      font-size: 0.85rem;
+      outline: none;
+      background: #f9fafb;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 1px rgba(31, 79, 107, 0.3);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .contact-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 1.6rem 0 1.1rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    /* Floating buttons (mobile friendly) */
+
+    .floating-actions {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 40;
+    }
+
+    .fab {
+      border-radius: 999px;
+      padding: 0.6rem 0.9rem;
+      background: var(--primary-dark);
+      color: var(--white);
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.75);
+    }
+
+    .fab-secondary {
+      background: var(--accent);
+      color: #111827;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .projects-grid,
+      .services-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 2.2rem;
+      }
+
+      .hero-card {
+        margin-top: 0.7rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid,
+      .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card {
+        border-radius: 22px;
+      }
+
+      .floating-actions {
+        left: 1rem;
+        right: 1rem;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .fab {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- NAVBAR -->
+    <header>
+      <div class="container nav">
+        <a href="#top" class="brand">
+          <div class="brand-mark">R</div>
+          <div>
+            Rios Constructions
+          </div>
+        </a>
+        <nav class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:+1661XXXXXXX" class="nav-cta">
+            <span>📞</span> Call now
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="hero-kicker">Construction & Remodeling – Bakersfield, CA</div>
+            <h1 class="hero-title">
+              Reliable construction for homes in <span>Bakersfield</span>.
+            </h1>
+            <p class="hero-subtitle">
+              Rios Constructions specializes in kitchen and bathroom remodeling, granite
+              installation, drywall, flooring, plumbing, roofing, framing and painting.
+              We deliver clean, professional work you can trust.
+            </p>
+
+            <div class="hero-pills">
+              <div class="pill">Granite Installation</div>
+              <div class="pill">Kitchen Remodeling</div>
+              <div class="pill">Drywall & Painting</div>
+              <div class="pill">Flooring & Roofing</div>
+            </div>
+
+            <div class="hero-cta-row">
+              <a href="#contact" class="btn-primary">
+                Get a free estimate
+                <span>→</span>
+              </a>
+              <a href="#projects" class="btn-outline">
+                View recent projects
+              </a>
+            </div>
+
+            <div class="hero-note">
+              <strong>Licensed & insured.</strong> Serving Bakersfield and nearby areas.
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <div class="hero-card-header">
+              <div>
+                <div class="badge-local">Bakersfield • CA</div>
+                <div class="hero-tagline">Interior & exterior remodeling done right.</div>
+              </div>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric">
+                <div class="metric-label">Drywall & paint</div>
+                <div class="metric-value">Specialist</div>
+                <span>Smooth finishes & clean lines.</span>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Response time</div>
+                <div class="metric-value">Fast</div>
+                <span>We visit your home for a quote.</span>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Remodels</div>
+                <div class="metric-value">Kitchen • Bath</div>
+                <span>From demo to final details.</span>
+              </div>
+            </div>
+
+            <div class="hero-services-mini">
+              <span>Granite countertops</span>
+              <span>Flooring installation</span>
+              <span>Plumbing adjustments</span>
+              <span>Framing & drywall</span>
+              <span>Interior / exterior paint</span>
+            </div>
+
+            <div class="hero-stamp">
+              Free on-site estimates<br />
+              <strong>Rios Constructions</strong>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Services</div>
+            <h2 class="section-title">What we can do for your home</h2>
+            <p class="section-subtitle">
+              We handle the complete process—from demolition to finishing touches—so
+              you only deal with one team.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon">🪨</div>
+              <h3 class="service-title">Granite Installation</h3>
+              <p class="service-text">
+                Custom granite countertops for kitchens, islands and bathrooms. Clean cuts,
+                precise installation and sealed surfaces ready for daily use.
+              </p>
+              <div class="service-note">Perfect for kitchen upgrades.</div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🍽️</div>
+              <h3 class="service-title">Kitchen Remodeling</h3>
+              <p class="service-text">
+                Full or partial kitchen remodels: cabinets, countertops, backsplashes,
+                lighting, flooring and paint. We transform old kitchens into modern, functional spaces.
+              </p>
+              <div class="service-note">Demo, rebuild and finishes.</div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🚿</div>
+              <h3 class="service-title">Bathroom Remodeling</h3>
+              <p class="service-text">
+                Tile installation, new showers, tubs, vanities and lighting. Waterproof
+                solutions, clean grout lines and durable materials for everyday use.
+              </p>
+              <div class="service-note">Showers, tile & fixtures.</div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🧱</div>
+              <h3 class="service-title">Drywall & Framing</h3>
+              <p class="service-text">
+                New walls, repairs, patches and complete framing. We specialize in
+                smooth drywall finishes ready for paint, with straight and solid framing.
+              </p>
+              <div class="service-note">Drywall specialist.</div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🧰</div>
+              <h3 class="service-title">Plumbing Adjustments</h3>
+              <p class="service-text">
+                Plumbing for kitchen and bathroom remodels: sink relocation, new
+                connections, faucet installation and basic plumbing adjustments for your project.
+              </p>
+              <div class="service-note">Ideal for remodel projects.</div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🪚</div>
+              <h3 class="service-title">Flooring & Roofing</h3>
+              <p class="service-text">
+                Installation of tile, laminate and other flooring, plus roof repairs
+                and new roof installation as part of your remodeling project.
+              </p>
+              <div class="service-note">Interior & exterior.</div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🎨</div>
+              <h3 class="service-title">Interior & Exterior Painting</h3>
+              <p class="service-text">
+                Professional painting with proper prep, primer and high-quality paint.
+                Crisp lines, smooth surfaces and clean job sites when we’re done.
+              </p>
+              <div class="service-note">Homes, garages & more.</div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">🏠</div>
+              <h3 class="service-title">Ceiling Installation</h3>
+              <p class="service-text">
+                Ceiling repairs and new ceilings with drywall, texture and paint. We take
+                care of water damage repairs and new designs.
+              </p>
+              <div class="service-note">Flat & textured ceilings.</div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">📐</div>
+              <h3 class="service-title">Custom Projects</h3>
+              <p class="service-text">
+                Have something specific in mind? Let us know your idea and we will help
+                you design and build the right solution for your home.
+              </p>
+              <div class="service-note">Ask for a custom quote.</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="container about-grid">
+          <div>
+            <div class="section-header">
+              <div class="section-kicker">About</div>
+              <h2 class="section-title">Built on trust and clean work</h2>
+              <p class="section-subtitle">
+                Rios Constructions is a local company in Bakersfield focused on delivering
+                solid, long-lasting construction with a professional attitude on every job.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <p>
+                We know letting someone work inside your home is a big decision. Our goal is
+                simple: show up on time, keep the jobsite clean, communicate clearly and
+                leave you with a finished project you’re proud to show.
+              </p>
+
+              <ul class="about-list">
+                <li><span class="dot"></span> Free on-site estimates in Bakersfield and nearby areas.</li>
+                <li><span class="dot"></span> We handle kitchen, bathroom and whole-home remodeling.</li>
+                <li><span class="dot"></span> Specialist in drywall, paint and interior finishes.</li>
+                <li><span class="dot"></span> Respectful crew, clean work and clear timelines.</li>
+              </ul>
+
+              <p class="about-highlight">
+                One team for granite, framing, drywall, plumbing adjustments, flooring and paint.
+              </p>
+
+              <div class="about-badge-row">
+                <span class="badge-soft">Local to Bakersfield</span>
+                <span class="badge-soft">Residential projects</span>
+                <span class="badge-soft">Interior & exterior</span>
+              </div>
+
+              <div class="about-blockquote">
+                “We treat every project like it was our own home—details matter, from the
+                first screw to the last coat of paint.”
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-header">
+              <h3 class="section-title">Why homeowners choose us</h3>
+            </div>
+            <ul class="about-list">
+              <li><span class="dot"></span> One contact for multiple trades – no need to manage 5 different crews.</li>
+              <li><span class="dot"></span> Clear quotes with labor and material options explained in simple terms.</li>
+              <li><span class="dot"></span> We protect your floors, cover furniture and clean up at the end of each day.</li>
+              <li><span class="dot"></span> Photos and updates so you always know where your project stands.</li>
+            </ul>
+            <p class="about-highlight">
+              Ready to start? Send us photos of your space and we’ll prepare an estimate.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Projects</div>
+            <h2 class="section-title">Recent work</h2>
+            <p class="section-subtitle">
+              Here are examples of the type of projects we complete. Replace these blocks
+              with your own photos when you’re ready.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image"></div>
+              <div class="project-body">
+                <h3 class="project-title">Granite kitchen remodel</h3>
+                <p class="project-meta">Bakersfield, CA • Kitchen</p>
+                <p class="project-text">
+                  New cabinets, granite countertops, backsplash, flooring and paint. We
+                  handled demolition, installation and finishing.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image"></div>
+              <div class="project-body">
+                <h3 class="project-title">Bathroom tile & shower</h3>
+                <p class="project-meta">Bakersfield, CA • Bathroom</p>
+                <p class="project-text">
+                  Complete shower rebuild with new tile, plumbing adjustments, niche and
+                  glass installation prepared.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image"></div>
+              <div class="project-body">
+                <h3 class="project-title">Drywall & paint refresh</h3>
+                <p class="project-meta">Bakersfield, CA • Interior</p>
+                <p class="project-text">
+                  Patching, new drywall, texture and full-house painting to update a rental
+                  property before new tenants.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="container contact-grid">
+          <div>
+            <div class="section-header">
+              <div class="section-kicker">Contact</div>
+              <h2 class="section-title">Request your free estimate</h2>
+              <p class="section-subtitle">
+                Tell us what you need and we’ll contact you to schedule a visit or a call.
+              </p>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-badge">
+                📍 Serving Bakersfield, CA and nearby areas
+              </div>
+              <div class="contact-info">
+                <p><strong>Phone:</strong> <a href="tel:+1661XXXXXXX">+1 (661) XXX-XXXX</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@riosconstructions.com">info@riosconstructions.com</a></p>
+                <!-- Puedes cambiar este correo por el tuyo real -->
+                <p><strong>Hours:</strong> Monday – Saturday, 8:00 AM – 6:00 PM</p>
+              </div>
+
+              <!--
+                NOTA (para ti):
+                - Puedes conectar este formulario a Formspree, Netlify Forms o tu propio backend.
+                - Por ahora, el action es "#" para que no envíe nada.
+              -->
+              <form action="#" method="post">
+                <div>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Full name" required />
+                </div>
+                <div>
+                  <label for="phone">Phone number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(661) 000-0000" required />
+                </div>
+                <div>
+                  <label for="service">Type of project</label>
+                  <select id="service" name="service" required>
+                    <option value="">Select one</option>
+                    <option value="kitchen">Kitchen remodeling</option>
+                    <option value="bathroom">Bathroom remodeling</option>
+                    <option value="granite">Granite installation</option>
+                    <option value="drywall-paint">Drywall & painting</option>
+                    <option value="flooring">Flooring installation</option>
+                    <option value="roofing">Roofing</option>
+                    <option value="plumbing">Plumbing adjustments</option>
+                    <option value="other">Other project</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="message">Tell us about your project</label>
+                  <textarea id="message" name="message" placeholder="Short description, address area and preferred dates."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                  Submit request
+                </button>
+                <p class="contact-note">
+                  We usually respond within one business day.
+                </p>
+              </form>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-header">
+              <h3 class="section-title">How the estimate works</h3>
+            </div>
+            <div class="contact-info">
+              <p><strong>1. Send us details</strong></p>
+              <p>Share photos of your space and a short description of what you want to change.</p>
+            </div>
+            <div class="contact-info">
+              <p><strong>2. We visit or call you</strong></p>
+              <p>We schedule a visit in Bakersfield or a phone/video call to review measurements and options.</p>
+            </div>
+            <div class="contact-info">
+              <p><strong>3. Clear written estimate</strong></p>
+              <p>You receive a detailed estimate with labor, materials and estimated timeline.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-row">
+        <div>© <span id="year"></span> Rios Constructions. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="#top">Back to top</a>
+          <!-- Aquí podrías agregar Privacy Policy o Terms cuando los tengas -->
+        </div>
+      </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS (llamadas rápidas en celular) -->
+    <div class="floating-actions">
+      <a href="tel:+1661XXXXXXX" class="fab">
+        📞 Call now
+      </a>
+      <!-- Si usas WhatsApp Business, cambia el enlace por tu número real -->
+      <a href="https://wa.me/1661XXXXXXX" class="fab fab-secondary">
+        💬 WhatsApp quote
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Año automático en el footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
